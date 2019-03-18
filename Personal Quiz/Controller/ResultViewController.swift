@@ -10,12 +10,9 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
-    var answers: [PersonType]?
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
 }

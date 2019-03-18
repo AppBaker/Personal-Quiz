@@ -11,7 +11,6 @@ import UIKit
 class QuestionViewController: UIViewController {
     //MARK: - ... Properties
     var questions = Question.loadData()
-    var answersArray = [PersonType]()
     var questionIndex = 0
     
     //MARK: - ... @IBOutlets
@@ -31,7 +30,6 @@ class QuestionViewController: UIViewController {
     
     //MARK: - ... Custom Methods
     func updateUI() {
-        var toggles = [UISwitch]()
         var index = 0
         singleStackView.isHidden = true
         multipleStackView.isHidden = true
@@ -73,7 +71,7 @@ class QuestionViewController: UIViewController {
                         if let answerLable = item as? UILabel {
                             answerLable.text = curentQuestion.answers[index].text
                         } else if let toggle = item as? UISwitch {
-                            toggles.append(toggle)
+                            toggle.isOn = false
                         }
                     }
                 }  else if let button = stackView as? UIButton {
@@ -121,10 +119,5 @@ class QuestionViewController: UIViewController {
     }
     
     //MARK: - ... Segue methods
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "resultSegue"{
-            let dvc = segue.destination as! ResultViewController
-            dvc.answers = answersArray
-        }
-    }
+
 }
