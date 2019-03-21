@@ -37,6 +37,7 @@ class ResultViewController: UIViewController {
     func updateUI(with person: PersonType) {
         headerLabel.text = "Вы — \(person.rawValue)"
         discriptionLabel.text = person.definition
+        title = "Вы — \(person.rawValue)"
     }
 
 }

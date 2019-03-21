@@ -23,6 +23,14 @@ struct Question {
                         Answer(text: "Делегирование и постановка задач", type: .businessman),
                         Answer(text: "Доходность", type: .investor)
                 ]),
+            Question(text: "Как вы храните свои сбережения",
+                     type: .single,
+                     answers: [
+                        Answer(text: "Живу от зарплаты до зарплаты", type: .staff),
+                        Answer(text: "На счету в банке", type: .expert),
+                        Answer(text: "В активах компаний", type: .businessman),
+                        Answer(text: "Вкладываю в ценные бумаги", type: .investor)
+                ]),
             Question(text: "Ваш доход вырос в два раза",
                      type: .multiple,
                      answers: [
