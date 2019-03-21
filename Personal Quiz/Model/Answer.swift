@@ -13,8 +13,8 @@ struct Answer {
     var type: PersonType
 }
 
-enum PersonType: Character {
-    case staff = "☹️", expert = "😐", businessman = "🙂", investor = "😀"
+enum PersonType: String {
+    case staff = "☹️ Работник по найму", expert = "😐 Хороший специалист", businessman = "🙂 Бизнесмен", investor = "😀 Инвестор"
     
     var definition: String {
         switch self {
